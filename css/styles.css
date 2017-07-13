@@ -104,7 +104,6 @@ ul {
       width: 561px;
       height: 394px;
       background-image: url("../res/tablet-1.png"); } }
-<<<<<<< HEAD
 
 .tablet-screen {
   margin-left: 10%;
@@ -194,5 +193,3 @@ ul {
   .notepad__link:hover {
     -webkit-box-shadow: 0px 1px 0px 0px rgba(34, 34, 34, 0.6);
             box-shadow: 0px 1px 0px 0px rgba(34, 34, 34, 0.6); }
-=======
->>>>>>> 74485549e667f1de060911cb346aa5ef7a52973a
