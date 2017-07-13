@@ -91,7 +91,7 @@ ul {
   @media screen and (min-width: 0) {
     .tablet {
       height: 450px;
-      background-image: url("/res/tablet-rotate.png");
+      background-image: url("../res/tablet-rotate.png");
       background-position: 50% 0;
       background-size: contain;
       background-repeat: no-repeat; } }
@@ -99,4 +99,4 @@ ul {
     .tablet {
       width: 561px;
       height: 394px;
-      background-image: url("/res/tablet-1.png"); } }
+      background-image: url("../res/tablet-1.png"); } }
