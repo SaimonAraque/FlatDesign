@@ -3,6 +3,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 body {
+  padding: 0;
   margin: 0;
   background: #cca675; }
 
@@ -36,12 +37,14 @@ ul {
 
 .header-container {
   width: 95%;
-  margin: 0 auto;
-  background: rgba(0, 0, 255, 0.1); }
+  margin: 0 auto; }
   @media screen and (min-width: 0) {
     .header-container {
       display: grid;
       grid-template-rows: 3;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       grid-gap: 16px; } }
   @media screen and (min-width: 720px) {
     .header-container {
@@ -53,16 +56,11 @@ ul {
       grid-template-columns: repeat(4, 25%);
       grid-gap: 0; } }
 
-.header__tablet, .header__phone, .header__notepad {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid black; }
-  @media screen and (min-width: 0) {
-    .header__tablet, .header__phone, .header__notepad {
-      width: 100%; } }
-
 @media screen and (min-width: 0) {
   .header__tablet {
-    grid-row: 1; } }
+    grid-row: 1; }
+  .header__phone {
+    grid-row: 2; } }
 
 @media screen and (min-width: 720px) {
   .header__tablet {
@@ -71,7 +69,7 @@ ul {
     grid-row: 2; }
   .header__phone {
     grid-column: 2; }
-  .header__notepade {
+  .header__notepad {
     grid-column: 1; } }
 
 @media screen and (min-width: 1200px) {
@@ -85,18 +83,113 @@ ul {
     grid-column: 1; } }
 
 .tablet {
-  background: rgba(0, 0, 0, 0.5);
   border: none;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid black; }
   @media screen and (min-width: 0) {
     .tablet {
+      width: 100%;
       height: 450px;
-      background-image: url("/res/tablet-rotate.png");
+      background-image: url("../res/tablet-rotate.png");
       background-position: 50% 0;
       background-size: contain;
       background-repeat: no-repeat; } }
-  @media screen and (min-width: 561px) {
+  @media screen and (min-width: 360px) {
+    .tablet {
+      width: 340px;
+      height: 500px; } }
+  @media screen and (min-width: 580px) {
     .tablet {
       width: 561px;
       height: 394px;
-      background-image: url("/res/tablet-1.png"); } }
+      background-image: url("../res/tablet-1.png"); } }
+
+.tablet-screen {
+  margin-left: 10%;
+  margin-right: 17%;
+  text-align: center;
+  color: white;
+  padding-top: 16px;
+  margin-top: 16px; }
+
+.tablet__title {
+  width: calc(100% - 4px);
+  padding: 16px 16px;
+  background: #00b097;
+  -webkit-box-shadow: 4px 4px 0px 0px #007d6b;
+          box-shadow: 4px 4px 0px 0px #007d6b;
+  font-size: 24px;
+  margin: 0 auto; }
+
+.tablet__buttons {
+  margin-top: 8px; }
+  @media screen and (min-width: 0) {
+    .tablet__buttons {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+.tablet__button {
+  text-decoration: none;
+  color: white;
+  background: #ffa0a0;
+  -webkit-box-shadow: 2px 2px 0px 0px #ff5454;
+          box-shadow: 2px 2px 0px 0px #ff5454;
+  padding: 8px 0; }
+  .tablet__button:hover {
+    background: #ff8787; }
+  @media screen and (min-width: 0) {
+    .tablet__button {
+      margin-top: 8px;
+      width: 80%; } }
+
+.phone {
+  background-image: url("../res/phone.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 504px;
+  margin: 0 auto; }
+  @media screen and (min-width: 360px) {
+    .phone {
+      width: 316px; } }
+
+.notepad {
+  background-image: url("../res/notepad.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  height: 550px;
+  margin: 0 auto;
+  position: relative; }
+  @media screen and (min-width: 360px) {
+    .notepad {
+      width: 289px; } }
+
+.notepad__links {
+  position: absolute; }
+  @media screen and (min-width: 0) {
+    .notepad__links {
+      top: 15%;
+      left: 20%; } }
+  @media screen and (min-width: 360px) {
+    .notepad__links {
+      top: 90px;
+      left: 64px; } }
+
+.notepad__link {
+  text-decoration: none;
+  font-family: "Bradley Hand ITC", cursive;
+  font-size: 24px;
+  color: rgba(51, 51, 51, 0.8); }
+  .notepad__link:hover {
+    -webkit-box-shadow: 0px 1px 0px 0px rgba(34, 34, 34, 0.6);
+            box-shadow: 0px 1px 0px 0px rgba(34, 34, 34, 0.6); }
