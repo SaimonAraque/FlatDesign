@@ -1,0 +1,102 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Berlin Sans FB", serif;
+  font-weight: normal; }
+
+body {
+  margin: 0;
+  background: #cca675; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none; }
+
+.nav {
+  background: #00b097; }
+  .nav-container {
+    width: 90%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.title__link, .nav__home {
+  text-decoration: none;
+  color: white; }
+
+.header-container {
+  width: 95%;
+  margin: 0 auto;
+  background: rgba(0, 0, 255, 0.1); }
+  @media screen and (min-width: 0) {
+    .header-container {
+      display: grid;
+      grid-template-rows: 3;
+      grid-gap: 16px; } }
+  @media screen and (min-width: 720px) {
+    .header-container {
+      grid-template-rows: 2;
+      grid-template-columns: repeat(2, 50%); } }
+  @media screen and (min-width: 1200px) {
+    .header-container {
+      grid-template-rows: 1;
+      grid-template-columns: repeat(4, 25%);
+      grid-gap: 0; } }
+
+.header__tablet, .header__phone, .header__notepad {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid black; }
+  @media screen and (min-width: 0) {
+    .header__tablet, .header__phone, .header__notepad {
+      width: 100%; } }
+
+@media screen and (min-width: 0) {
+  .header__tablet {
+    grid-row: 1; } }
+
+@media screen and (min-width: 720px) {
+  .header__tablet {
+    grid-column: 1 / 3; }
+  .header__phone, .header__notepad {
+    grid-row: 2; }
+  .header__phone {
+    grid-column: 2; }
+  .header__notepade {
+    grid-column: 1; } }
+
+@media screen and (min-width: 1200px) {
+  .header__tablet {
+    grid-column: 2 / 4; }
+  .header__phone, .header__notepad {
+    grid-row: 1; }
+  .header__phone {
+    grid-column: 4; }
+  .header__notepad {
+    grid-column: 1; } }
+
+.tablet {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  margin: 0 auto; }
+  @media screen and (min-width: 0) {
+    .tablet {
+      height: 450px;
+      background-image: url("/res/tablet-rotate.png");
+      background-position: 50% 0;
+      background-size: contain;
+      background-repeat: no-repeat; } }
+  @media screen and (min-width: 561px) {
+    .tablet {
+      width: 561px;
+      height: 394px;
+      background-image: url("/res/tablet-1.png"); } }
